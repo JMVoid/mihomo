@@ -141,7 +141,8 @@ type Group interface {
 }
 
 type DelayHistory struct {
-	Time  time.Time `json:"time"`
+	//Time  time.Time `json:"time"`
+	Time string `json:"time"`
 	Delay uint16    `json:"delay"`
 }
 

@@ -199,7 +199,7 @@ func (p *Proxy) URLTest(ctx context.Context, url string, expectedStatus utils.In
 		switch store {
 		case C.OriginalHistory:
 			p.alive.Store(alive)
-			record := C.DelayHistory{Time: time.Now()}
+			record := C.DelayHistory{Time: time.Now().String()}
 			if alive {
 				record.Delay = t
 			}
@@ -213,7 +213,7 @@ func (p *Proxy) URLTest(ctx context.Context, url string, expectedStatus utils.In
 				p.url = url
 			}
 		case C.ExtraHistory:
-			record := C.DelayHistory{Time: time.Now()}
+			record := C.DelayHistory{Time: time.Now().String()}
 			if alive {
 				record.Delay = t
 			}

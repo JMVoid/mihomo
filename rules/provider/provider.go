@@ -111,7 +111,7 @@ func (rp *ruleSetProvider) MarshalJSON() ([]byte, error) {
 			"name":        rp.Name(),
 			"ruleCount":   rp.strategy.Count(),
 			"type":        rp.Type().String(),
-			"updatedAt":   rp.UpdatedAt,
+			"updatedAt":   rp.UpdatedAt().String(),
 			"vehicleType": rp.VehicleType().String(),
 		})
 }
